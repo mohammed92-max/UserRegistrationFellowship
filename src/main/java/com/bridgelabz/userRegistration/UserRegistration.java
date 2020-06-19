@@ -6,14 +6,14 @@ public class UserRegistration
 {
     public static boolean patternMatching( String pattern )
     {
-        return pattern.matches( "^([A-Z]{1}[a-z]{2,})$" );
+        return pattern.matches( "^([a-z][a-z 0-9 \\ ]*[@][a-z]*[.][a-z . ]*)$" );
     }
 
     public static void main( String[] args )
     {
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Enter the last name");
+        System.out.println("Enter the email");
         String pattern = scan.nextLine();
         System.out.println(patternMatching(pattern));
     }
